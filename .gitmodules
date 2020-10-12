@@ -13,3 +13,6 @@
 [submodule "suckless/slstatus"]
 	path = suckless/slstatus
 	url = https://git.suckless.org/slstatus
+[submodule "suckless/surf"]
+	path = suckless/surf
+	url = https://git.suckless.org/surf
