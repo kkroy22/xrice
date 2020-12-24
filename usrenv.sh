@@ -1,6 +1,7 @@
 GIT_REPO="$HOME/Downloads/appdata/xrice"
 
 XUR="kroy"
+CUR="$(whoami)"
 
 if [ "$USER" != $XUR ]; then
     (cd $GIT_REPO && git pull && git submodule update --init --recursive)
@@ -20,13 +21,13 @@ SUDPS1="\[$SUDC\][\u]\[$ENDC\]-\[$DIRC\][\w]\[$ENDC\]\n\[$SUDC\]>\[$ENDC\]"
 REGPS1="\[$REGC\][\u]\[$ENDC\]-\[$DIRC\][\w]\[$ENDC\]\n\[$REGC\]>\[$ENDC\]"
 OFFPS1="\[$OFFC\][\u]\[$ENDC\]-\[$DIRC\][\w]\[$ENDC\]\n\[$OFFC\]>\[$ENDC\]"
 
-if [ "$USER" = "root" ]; then
+if [ "$CUR" = "root" ]; then
     PS1=$ROTPS1
-elif [ "$USER" = "bikky" ]; then
+elif [ "$CUR" = "bikky" ]; then
     PS1=$SUDPS1
-elif [ "$USER" = "compute" ]; then
+elif [ "$CUR" = "compute" ]; then
     PS1=$REGPS1
-elif [ "$USER" = "kroy" ]; then
+elif [ "$CUR" = "kroy" ]; then
     PS1=$REGPS1
 else
     PS1=$NIXPS1
